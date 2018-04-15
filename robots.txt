@@ -1,0 +1,19 @@
+User-agent: Yandex
+Disallow: /address.php
+Disallow: /authentication.php
+Disallow: /delivery.php
+Disallow: /identity.php
+Disallow: /addresses.php
+Disallow: /contact-form.php
+Disallow: /*scripts
+Sitemap: http://www.avto-polit.ru/sitemap.xml
+
+User-agent: *
+Disallow: /address.php
+Disallow: /authentication.php
+Disallow: /delivery.php
+Disallow: /identity.php
+Disallow: /addresses.php
+Disallow: /contact-form.php 
+Disallow: /*scripts
+Sitemap: http://www.avto-polit.ru/sitemap.xml

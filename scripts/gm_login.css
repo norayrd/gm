@@ -1,0 +1,32 @@
+form#form_identification{
+}
+form#form_identification label{
+	font-size:12px;
+	color:#CCCCCC;  
+}
+form#form_identification input#identification_login, form#form_identification input#identification_password{
+	width:70;
+	font-size:12px;
+}
+form#form_identification input#identification_submit{
+	font-size:12px;
+	color:#FF0000;
+	background-color:transparent;
+	border-style:none;
+}
+form#form_identification a:link, form#form_identification a:visited{
+	font-size:12px;
+	color:#FF0000;
+}
+form#form_identification a:hover{
+	font-size:12px;
+	color:#6FF;
+}
+label#identification_label_logined, label#identification_label_login, label#identification_label_password{
+	font-size:12px;
+	color:#CCCCCC;  
+}
+a#identification_logout{
+	font-size:12px;
+	color:#FF0000;
+}

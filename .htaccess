@@ -1,0 +1,17 @@
+AddDefaultCharset WINDOWS-1251
+
+ErrorDocument 404 /index.php
+
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^avtotim\.com\.ua$ [NC]
+#RewriteCond %{REQUEST_URI} !^/$ [NC]
+#RewriteRule ^(.*)$ http://www.avtotim.com.ua/demo/$1 [L]
+
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^www\.avtotim\.com\.ua$ [NC]
+#RewriteCond %{REQUEST_URI} !^/$ [NC]
+#RewriteRule ^(.*)$ http://avtotim.com.ua/demo/$1 [L]
+
+#<IfModule mod_php.c>
+#     php_value max_execution_time 60
+#</IfModule>

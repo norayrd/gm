@@ -1,0 +1,12 @@
+form#search_tov{
+}
+form#search_tov label#search_tov_label{
+	font-size:14px;
+	color:#FFFFFF;
+}
+form#search_tov input#search_tov_submit{
+	color:#FF0000; 
+	font-size:14; 
+	Background-color:transparent; 
+	border-style:none;
+}

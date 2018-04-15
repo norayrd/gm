@@ -1,0 +1,43 @@
+table.tbstyle1{
+	border:1px;
+	border-style:groove;
+	border-color:#999999;
+	border-spacing:1px;
+	padding:0;
+}
+table.tbstyle1 th{
+		text-align:center;
+		background-color:#B1B4B6;
+		vertical-align:middle;
+		font-weight:normal;
+		font-size:12px; 
+}
+table.tbstyle1 tfoot{
+		text-align:center;
+		background-color:#B1B4B6;
+		vertical-align:middle;
+		font-weight:normal; 
+}
+.even{
+	background-color:#EEE;
+}
+.odd{
+	background-color:#DDD;
+}
+.txt10bb{
+	font-family:Verdana, Geneva, sans-serif; 
+	font-size:10px; 
+	font-weight:bold;
+}
+
+#message_box { 
+    position: absolute; 
+    top: 0; left: 0; 
+    z-index: 1000000; 
+    background:#ffc;
+    padding:5px;
+    border:1px solid #CCCCCC;
+    text-align:center; 
+    font-weight:bold; 
+    width:99%;
+}
