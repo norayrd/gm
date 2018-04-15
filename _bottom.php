@@ -31,12 +31,14 @@
 	</div>
 	<p>© 2012 <a href="http://www.avto-polit.ru/">AvtoPolit</a>. Все права защищены</p>
 </div><div id="tmcontacts">
-<h2>Контакты</h2>
-<h3></h3>
-<h4><span>+38 (066)</span>970-12-48 <span style="font-size: 10px; color: red;">МТС</span></h4> 
-<h4><span>+38 (097)</span>310-78-99 <span style="font-size: 10px; color: aqua;">Kyivstar</span></h4>
-<h4><span>Адрес:</span> Украина, г.Киев, ул.Березняковская, 13</h4>
-</div><!-- tmsocial -->
+    <?php 
+//<h2>Контакты</h2>
+//<h3></h3>
+//<h4><span>+38 (066)</span>970-12-48 <span style="font-size: 10px; color: red;">МТС</span></h4> 
+//<h4><span>+38 (097)</span>310-78-99 <span style="font-size: 10px; color: aqua;">Kyivstar</span></h4>
+//<h4><span>Адрес:</span> Украина, г.Киев, ул.Березняковская, 13</h4>
+//</div><!-- tmsocial -->
+    ?>
 <div id="tmsocial">
 	<ul>
 				<li><a href=""></a></li>
