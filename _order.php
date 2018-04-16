@@ -57,8 +57,8 @@ if (($step_==1)||($step_==2)) {
 					<!-- th class="cart_ref item">Примечание</th -->
 					<th class="cart_availability item">Сроки</th>
 					<th class="cart_quantity item">Кол.</th>
-					<th class="cart_unit item">Цена (грн)</th>
-					<th class="cart_total last_item">Сумма (грн)</th>
+					<th class="cart_unit item">Цена (руб)</th>
+					<th class="cart_total last_item">Сумма (руб)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -286,8 +286,8 @@ if (($step_==1)||($step_==2)) {
 					<th class="cart_description item">Наименование</th>
                     <th class="cart_description item">Сроки</th>
 					<th class="cart_quantity item">Кол.</th>
-					<th width="100px" class="cart_total item">Цена (грн)</th>
-					<th width="100px" class="cart_total last_item">Сумма (грн)</th>
+					<th width="100px" class="cart_total item">Цена (руб)</th>
+					<th width="100px" class="cart_total last_item">Сумма (руб)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -351,7 +351,7 @@ if (($step_==1)||($step_==2)) {
                     <td class="price" id="total_price_without_tax"><span class="price"><?php print "$total_summa"; ?></span></td>
                 </tr>
                 <tr class="cart_total_price">
-                    <td colspan="6">Итого (грн.):</td>
+                    <td colspan="6">Итого (руб.):</td>
                     <td class="price" id="total_price"><span class="price"><?php print "$total_summa"; ?></span></td>
                 </tr>
 			</tfoot>

@@ -259,7 +259,7 @@ while($i<$tb_n){
     $tb_count=mysql_result($tb,$i,"count_");
     $tb_cena=number_format(mysql_result($tb,$i,"cena_uah"),2,'.','');
     $tb_dil_cena=number_format(mysql_result($tb,$i,"dil_cena"),2,'.','');
-    $tb_valyuta_pref="грн."; 
+    $tb_valyuta_pref="руб."; 
 	$tb_dil_valyuta_pref=mysql_result($tb,$i,"pref_");
 	$tb_image1=mysql_result($tb,$i,"pic_mini");
 	if ($tb_image1=='') $tb_image1="images/gear.jpg"; else $tb_image1="shini/images/".$tb_image1;

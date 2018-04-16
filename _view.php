@@ -30,7 +30,7 @@ if (($reklama_kod>0)||($prices_kod>0)) {
 				$reklama_tov_kod=mysql_result($tb,0,"tov_kod");
 				$reklama_tov_name=mysql_result($tb,0,"tov_name");
 				$reklama_cena=number_format(mysql_result($tb,0,"cena_uah"),2,'.','');
-				$reklama_valyuta_pref="грн."; //mysql_result($tb,0,"pref_");
+				$reklama_valyuta_pref="руб."; //mysql_result($tb,0,"pref_");
 				$reklama_pricesh_kod=mysql_result($tb,0,"pricesh_kod");
 				$reklama_text_short=str_replace(chr(13), "<br>",mysql_result($tb,0,"text_short"));
 				$reklama_text_full=str_replace(chr(13), "<br>",mysql_result($tb,0,"text_full"));

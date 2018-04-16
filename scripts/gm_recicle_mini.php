@@ -36,7 +36,7 @@
 <tr>
     <td>
 <label id="recicle_mini_txt1">Позиций:<?php print $pozicii_; ?></label>
-        <label id="recicle_mini_txt2"><br>Всего: <?php print $summa_; ?> грн.</label>
+        <label id="recicle_mini_txt2"><br>Всего: <?php print $summa_; ?> руб.</label>
     </td>
 </tr>
 </table>

@@ -42,7 +42,7 @@ while($i<$rek_n){
 	$rek_tov_name_short=substr($rek_tov_name,0,35);
 	if (strlen($rek_tov_name)>36) $rek_tov_name_short=$rek_tov_name_short."...";
     $rek_cena=number_format(mysql_result($rek,$i,"cena_uah"),2,'.','');
-    $rek_valyuta_pref="грн."; //mysql_result($rek,$i,"pref_");
+    $rek_valyuta_pref="руб."; //mysql_result($rek,$i,"pref_");
 	$rek_image1=mysql_result($rek,$i,"image1_");
 	if ($rek_image1=='') $rek_image1="images/gear.jpg";
 	$rek_image2=mysql_result($rek,$i,"image2_");
