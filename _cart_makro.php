@@ -1,5 +1,3 @@
-		<link href="images/global00.css" rel="stylesheet" type="text/css" media="all">
-
 <?php require_once "scripts/gm_access.php"; 
 	if (isset($_GET["kod_"])) {
 		if ($_GET["kod_"]==$kod_) {
@@ -19,6 +17,7 @@
 		} else exit;
 	} else exit;
 ?>
+<link href="images/global00.css" rel="stylesheet" type="text/css" media="all">
 
 <div id="cart_block" class="block exclusive">                                                                        
 	<h4><a href="order.php">Корзина</a><span id="block_cart_expand" class="hidden">&nbsp;</span><span id="block_cart_collapse">&nbsp;</span></h4>

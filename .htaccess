@@ -1,5 +1,4 @@
 AddDefaultCharset WINDOWS-1251
-
 ErrorDocument 404 /index.php
 
 #RewriteEngine on

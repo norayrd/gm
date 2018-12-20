@@ -88,4 +88,4 @@ while($i<$rek_n){
 		<div class="clearblock"></div>
   </div>
 </div>
-    <!-- /MODULE Home Featured Products -->		
+    <!-- /MODULE Home Featured Products -->

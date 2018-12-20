@@ -1,5 +1,4 @@
 <?php
-
 include("scripts/gm_access.php");
 //putenv('GDFONTPATH=' . realpath('.'));
 
