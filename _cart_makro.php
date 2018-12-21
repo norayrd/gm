@@ -69,7 +69,7 @@
 				</div>
 				<div class="cart-prices-block">
 					<span>Всего</span>
-					<span id="cart_block_total" class="price ajax_block_cart_total"><?php print number_format($vsego_,2,".",""); ?> руб.</span>
+					<span id="cart_block_total" class="price ajax_block_cart_total"><?php print number_format($vsego_,2,".",""); ?> грн.</span>
 				</div>
 			</div>
 		<p id="cart-buttons">

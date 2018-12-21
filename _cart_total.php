@@ -39,7 +39,7 @@
                     <td class="price" id="total_tax"><span class="price">0.00</span></td>
                 </tr>
                 <tr class="cart_total_price">
-                    <td colspan="6">Итого (руб.):</td>
+                    <td colspan="6">Итого (грн.):</td>
                     <td class="price" id="total_price"><span class="price"><?php print "$total_summa"; ?></span></td>
                 </tr>
             <? 

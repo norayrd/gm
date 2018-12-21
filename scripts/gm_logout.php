@@ -1,13 +1,13 @@
 <?php
 	$username="root";
 	$password="";
-	$database="host1668182_gm";
+	$database="avtotim";
 	$host="localhost";
 
-	/* $username="host1668182_gm";
+	/* $username="bigmar_gm";
 	$password="dng1201197";
-	$database="host1668182_gm";
-	$host="localhost"; */
+	$database="bigmar_gm";
+	$host="db13.freehost.com.ua"; */
 
 	mysql_connect($host,$username,$password);
 	@mysql_select_db($database) or die("Unable connect to database!");
@@ -61,10 +61,10 @@
         unset($_POST['passwd']);
         unset($_POST['SubmitLogin']);
         if (!isset($user_id)) $user_id=0;
-		mysql_query("insert into gm_kod (kod_, ip_, user_id,HTTP_USER_AGENT)values('$kod_','".$_SERVER['REMOTE_ADDR']."',".$user_id.",'".$_SERVER['HTTP_USER_AGENT']."') ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."', user_id=$user_id,HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."';");
+		mysql_query("insert into gm_kod (kod_, ip_, user_id,HTTP_USER_AGENT, create_dt, last_access_dt)values('$kod_','".$_SERVER['REMOTE_ADDR']."',".$user_id.",'".$_SERVER['HTTP_USER_AGENT']."',current_timestamp,current_timestamp) ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."', user_id=$user_id,HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."',last_access_dt=current_timestamp;");
 		//header("Location: #");
 	}else{
-		$sql="insert into gm_kod (kod_, ip_         ,HTTP_USER_AGENT)values('$kod_','".$_SERVER['REMOTE_ADDR']."'             ,'".$_SERVER['HTTP_USER_AGENT']."') ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."',HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."';";
+		$sql="insert into gm_kod (kod_, ip_         ,HTTP_USER_AGENT,create_dt, last_access_dt)values('$kod_','".$_SERVER['REMOTE_ADDR']."'             ,'".$_SERVER['HTTP_USER_AGENT']."',current_timestamp,current_timestamp) ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."',HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."',last_access_dt=current_timestamp;";
 	    mysql_query($sql);
 		
 	}

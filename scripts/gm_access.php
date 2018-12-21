@@ -78,10 +78,10 @@
             $user_id=0;
             $user_view_id=0;
         }
-		mysql_query("insert into gm_kod (kod_, ip_, user_id,HTTP_USER_AGENT)values('$kod_','".$_SERVER['REMOTE_ADDR']."',".$user_id.",'".$_SERVER['HTTP_USER_AGENT']."') ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."', user_id=$user_id,HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."';");
+		mysql_query("insert into gm_kod (kod_, ip_, user_id,HTTP_USER_AGENT, create_dt, last_access_dt)values('$kod_','".$_SERVER['REMOTE_ADDR']."',".$user_id.",'".$_SERVER['HTTP_USER_AGENT']."', current_timestamp, current_timestamp) ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."', user_id=$user_id,HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."', last_access_dt=current_timestamp;");
 		//header("Location: #");
 	}else{
-		$sql="insert into gm_kod (kod_, ip_         ,HTTP_USER_AGENT)values('$kod_','".$_SERVER['REMOTE_ADDR']."'             ,'".$_SERVER['HTTP_USER_AGENT']."') ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."',HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."';";
+		$sql="insert into gm_kod (kod_, ip_         ,HTTP_USER_AGENT, create_dt, last_access_dt)values('$kod_','".$_SERVER['REMOTE_ADDR']."'             ,'".$_SERVER['HTTP_USER_AGENT']."', current_timestamp, current_timestamp) ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."',HTTP_USER_AGENT='".$_SERVER['HTTP_USER_AGENT']."', last_access_dt=current_timestamp;";
 	    mysql_query($sql);
 		
 	}
@@ -153,9 +153,9 @@
                 
 			}
 			$email_=$_POST["email"];
-			$message_="<p>Уважаемый пользователь, благодарим Вас за регистрацию на сайте www.avto-polit.ru</p><p>Для завершения регистрации необходимо активировать Вашу учетную запись одним из нижеперечисленных способов:</p>
- <ul><li>перейдите по ссылке <a href='http://www.avto-polit.ru?activation=".$login_activated."&activation_email=$email_'>активация</a>;</li><li>зайдите на сайт www.avto-polit.ru и попробуйте войти под Вашим пользователем, на запрос кода активации введите ".$login_activated.".</li></ul>";
-			mail($email_, "Ключ активации учетной записи на сайте www.avto-polit.ru", $message_,"Content-type: text/html; charset=windows-1251; \r\nFrom:=?windows-1251?B?".base64_encode("Интернет магазин AvtoPolit")."?="."<info@avto-polit.ru>");
+			$message_="<p>Уважаемый пользователь, благодарим Вас за регистрацию на сайте www.avtotim.com.ua</p><p>Для завершения регистрации необходимо активировать Вашу учетную запись одним из нижеперечисленных способов:</p>
+ <ul><li>перейдите по ссылке <a href='http://www.avtotim.com.ua?activation=".$login_activated."&activation_email=$email_'>активация</a>;</li><li>зайдите на сайт www.avtotim.com.ua и попробуйте войти под Вашим пользователем, на запрос кода активации введите ".$login_activated.".</li></ul>";
+			mail($email_, "Ключ активации учетной записи на сайте www.avtotim.com.ua", $message_,"Content-type: text/html; charset=windows-1251; \r\nFrom:=?windows-1251?B?".base64_encode("Интернет магазин AVTOTIM")."?="."<info@avtotim.com.ua>");
 
 			$login_ok="<p>Спасибо за регистрацию.<br> В течении 10 минут на Ваш e-mail будет отправлено сообщение содержащее код активации.<br> Перейдите по указанной в ней ссылке для завершения процесса регистрации!</p>";
 			

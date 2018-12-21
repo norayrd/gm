@@ -104,8 +104,8 @@
 					<th class="cart_description item">Наименование</th>
                     <th class="cart_description item">Сроки</th>
 					<th class="cart_quantity item">Кол.</th>
-					<th width="100px" class="cart_total item">Цена (руб)</th>
-					<th width="100px" class="cart_total last_item">Сумма (руб)</th>
+					<th width="100px" class="cart_total item">Цена (грн)</th>
+					<th width="100px" class="cart_total last_item">Сумма (грн)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -166,7 +166,7 @@
                     <td class="price" id="total_price_without_tax"><span class="price"><?php print number_format($rashodh_summa_s_nds,2,'.',''); ?></span></td>
                 </tr>
                 <tr class="cart_total_price">
-                    <td colspan="6">Итого (руб.):</td>
+                    <td colspan="6">Итого (грн.):</td>
                     <td class="price" id="total_price"><span class="price"><?php print number_format($rashodh_summa_s_nds,2,'.',''); ?></span></td>
                 </tr>
 			</tfoot>
