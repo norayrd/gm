@@ -87,7 +87,8 @@ if ($sklad_group>0) {
 							$tb_tov_name=mysql_result($tb,$i,"tov_name");
 							$tb_cena=mysql_result($tb,$i,"cena_rozn");
 							$tb_prices_kod=mysql_result($tb,$i,"prices_kod");
-							$tb_valyuta_pref='руб.'; mysql_result($tb,$i,"pref_");
+                                                        //$tb_valyuta_pref = mysql_result($tb,$i,"pref_");
+                                                        $tb_valyuta_pref = 'грн.';
                             $tb_srok_min=mysql_result($tb,$i,"srok_min");
                             $tb_srok_max=mysql_result($tb,$i,"srok_max");
 							$tb_prices_kod=mysql_result($tb,$i,"prices_kod");
