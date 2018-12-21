@@ -1,13 +1,5 @@
 <?php
-	$username="root";
-	$password="";
-	$database="avtotim";
-	$host="localhost";
-
-	/* $username="bigmar_gm";
-	$password="dng1201197";
-	$database="bigmar_gm";
-	$host="db13.freehost.com.ua"; */
+	include "lopes.php";
 
 	mysql_connect($host,$username,$password);
 	@mysql_select_db($database) or die("Unable connect to database!");

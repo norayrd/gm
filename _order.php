@@ -434,8 +434,8 @@ if (($step_==1)||($step_==2)) {
         <h2>Ваш <a href="rashod.php?rashodh=<?php print $rashodh_kod; ?>">заказ</a> создан и в скором времени будет обработан нашими менеджерами.</h2>  
     <?php
         $mail_rashod=file_get_contents("http://".$_SERVER["SERVER_NAME"]."/__rashod.php?rashodh=$rashodh_kod&mailto=1");
-        mail("zakaz@avto-polit.ru", "Заказ № $rashodh_kod", $mail_rashod,"Content-type: text/html; charset=windows-1251 \r\nFrom:zakaz@avto-polit.ru");
-        mail($_POST["faces_email"], "Заказ № $rashodh_kod", $mail_rashod,"Content-type: text/html; charset=windows-1251 \r\nFrom:zakaz@avto-polit.ru");
+        mail("zakaz@tandem-auto.com.ua", "Заказ № $rashodh_kod", $mail_rashod,"Content-type: text/html; charset=windows-1251 \r\nFrom:zakaz@tandem-auto.com.ua");
+        mail($_POST["faces_email"], "Заказ № $rashodh_kod", $mail_rashod,"Content-type: text/html; charset=windows-1251 \r\nFrom:zakaz@tandem-auto.com.ua");
     }
     ?>
 

@@ -1,9 +1,9 @@
 <?php
-//olimp_n:ol456imp@olimpia-auto.com.ua/olimpiaauto
-  $login="olimp_n";
-  $passw="ol456imp";
-  $host="olimpia-auto.com.ua";
-  $database="olimpiaauto";
+//olimp_n:m123@host.com.ua/aaa
+  $login="m123";
+  $passw="m123";
+  $host="host.com.ua";
+  $database="db";
   
   //ключи шифрования
   define ('C1', 52845); 

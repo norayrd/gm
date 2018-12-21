@@ -64,7 +64,7 @@ while($i<$tb_n){
         <td  style="font-size:10px"><?php print $tb_search_date; ?></td>
         <td><a href="search.php?search_query=<?php print $tb_tov_kod; ?>"><?php print $tb_tov_kod; ?></a></td>
         <td  style="font-size:11px"><?php print $tb_user_name_full; ?></td>
-        <td align="center"><?php print "<a href='mailto:$tb_user_email?subject=&body=%0AС уважением интернет магазин www.avto-polit.ru'>$tb_user_email</a>"; ?></td>
+        <td align="center"><?php print "<a href='mailto:$tb_user_email?subject=&body=%0AС уважением интернет магазин www.tandem-auto.com.ua'>$tb_user_email</a>"; ?></td>
         <td align="center"><?php print $tb_user_avto_vin; ?></td>
         <td><?php print "$tb_user_avto_marka / $tb_user_avto_model / $tb_user_avto_year"; ?></td>
       </tr>

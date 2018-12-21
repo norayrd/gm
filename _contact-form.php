@@ -9,9 +9,9 @@
 			if (isset($_POST['message'])) $message_=$_POST['message']; else $message_="";
 			if (isset($_POST['id_order'])) $message_="Заказ № ".$_POST['id_order']."<br>\r\n".$message_;
 			if ($_POST['id_contact']==1) {
-                mail("info@avto-polit.ru", "Сообщение вебмастеру (из сайта)", $message_, "Content-type: text/html; charset=windows-1251 \r\nFrom:".$_POST['from']);
+                mail("info@tandem-auto.com.ua", "Сообщение вебмастеру (из сайта)", $message_, "Content-type: text/html; charset=windows-1251 \r\nFrom:".$_POST['from']);
 			}else if ($_POST['id_contact']==2) {
-                mail("zakaz@avto-polit.ru", "Сообщение в отдел заказов (из сайта)", $message_,"Content-type: text/html; charset=windows-1251 \r\nFrom:".$_POST['from']);
+                mail("zakaz@tandem-auto.com.ua", "Сообщение в отдел заказов (из сайта)", $message_,"Content-type: text/html; charset=windows-1251 \r\nFrom:".$_POST['from']);
 			}
 ?>
 			<div ><p>Ваше сообщение отправлено!</p></div>
@@ -24,7 +24,7 @@
 		}
 	}else{ 
 	//XMail( $from, $to, $subj, $text, $filename)
-	//XMail( "norayrd@rambler.ru", "info@avto-polit.ru", "письмо с отправкой", "проверка", "statusy.xlsx")
+	//XMail( "norayrd@rambler.ru", "info@tandem-auto.com.ua", "письмо с отправкой", "проверка", "statusy.xlsx")
 ?>
 <!-- Breadcrumb -->
 <div class="breadcrumb bordercolor">

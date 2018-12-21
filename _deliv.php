@@ -62,7 +62,7 @@ while($i<$tb_n){
         <td  style="font-size:11px"><?php print $tb_user_id; ?></td>
         <td><a style="font-size:11px"><?php print $tb_user_city; ?></a></td>
         <td  style="font-size:11px"><?php print $tb_user_name_full; ?></td>
-        <td align="center"><?php print "<a style='font-size:11px' href='mailto:$tb_user_email?subject=&body=%0AС уважением интернет магазин www.avto-polit.ru'>$tb_user_email</a>"; ?></td>
+        <td align="center"><?php print "<a style='font-size:11px' href='mailto:$tb_user_email?subject=&body=%0AС уважением интернет магазин www.tandem-auto.com.ua'>$tb_user_email</a>"; ?></td>
         <td align="center"><?php print $tb_user_tel; ?></td>
         <td style="font-size:10px"><?php print $tb_user_adr; ?></td>
       </tr>

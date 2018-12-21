@@ -54,7 +54,7 @@
 	<?php include "_bottom.php"; ?>
 </div>
 </div>
-<?php if (($_SERVER['HTTP_HOST']=="avto-polit.ru")or($_SERVER['HTTP_HOST']=="www.avto-polit.ru")) include "counters.php"; ?>
+<?php if (($_SERVER['HTTP_HOST']=="tandem-auto.com.ua")or($_SERVER['HTTP_HOST']=="www.tandem-auto.com.ua")) include "counters.php"; ?>
 </div>
 </body>
 </html>

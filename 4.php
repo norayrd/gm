@@ -2,7 +2,7 @@
 
 // Скрипт с сайта http://petrenco.com/php.php?txt=134
 
-$serv_addr = 'www.avto-polit.ru';
+$serv_addr = 'www.tandem-auto.com.ua';
 $serv_port = 80;
 $serv_page = 'index.php';
 $timelimit = 2; // Время ожидания ответа в сек. По умолчанию - 30 сек.

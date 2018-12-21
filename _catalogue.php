@@ -5,5 +5,5 @@
 ?>
 
 <script language="JavaScript">
-  window.location.href = "http://catalog.avto-polit.ru/totalcatalog/";
+  window.location.href = "http://catalog.tandem-auto.com.ua/totalcatalog/";
 </script>

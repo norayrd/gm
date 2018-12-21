@@ -68,7 +68,7 @@ while($i<$tb_n){
         <td  style="font-size:11px"><?php print "<a href='user.php?user_id=$tb_user_id&ts=$tb_user_ts&nextpage=klients.php'>$tb_user_id</a>"; ?></td>
         <td><a style="font-size:11px"><?php print $tb_user_login; ?></a></td>
         <td  style="font-size:11px"><?php print "<a href='face.php?faces_id=$tb_user_faces_id&ts=$tb_user_faces_ts&nextpage=klients.php'>$tb_user_name_full</a>"; ?></td>
-        <td align="center"><?php print "<a style='font-size:11px' href='mailto:$tb_user_email?subject=&body=%0AС уважением интернет магазин www.avto-polit.ru'>$tb_user_email</a>"; ?></td>
+        <td align="center"><?php print "<a style='font-size:11px' href='mailto:$tb_user_email?subject=&body=%0AС уважением интернет магазин www.tandem-auto.com.ua'>$tb_user_email</a>"; ?></td>
         <td align="center"><?php print $tb_user_avto_vin; ?></td>
         <td><?php print "$tb_user_avto_marka / $tb_user_avto_model / $tb_user_avto_year"; ?></td>
       </tr>

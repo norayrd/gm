@@ -1,8 +1,8 @@
 		<link href="images/global00.css" rel="stylesheet" type="text/css" media="all">
 
 <div id="header">
-		<a id="header_logo" href="http://www.avto-polit.ru" title="avto-polit.ru">
-			<img src="images/logotip.png" alt="avto-polit.ru" height="80" class="logo">
+		<a id="header_logo" href="http://www.tandem-auto.com.ua" title="tandem-auto.com.ua">
+			<img src="images/logotip.png" alt="tandem-auto.com.ua" height="80" class="logo">
 		</a>
 		<div id="header_right">
 		<div class="clearblock"></div>

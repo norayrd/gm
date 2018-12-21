@@ -29,7 +29,7 @@
 			<li><a href="supplier.php">Поставщики</a></li>
 		</ul>
 	</div>
-	<p>© 2012 <a href="http://www.avto-polit.ru/">AvtoPolit</a>. Все права защищены</p>
+	<p>© 2012 <a href="http://www.tandem-auto.com.ua/">www.tandem-auto.com.ua</a>. Все права защищены</p>
 </div><div id="tmcontacts">
     <?php 
 //<h2>Контакты</h2>

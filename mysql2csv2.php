@@ -11,8 +11,8 @@
   if(!$kar) exit("Ошибка ".mysql_error());
   if(mysql_num_rows($kar))
   {
-    unlink("download/"."avto-polit-price.csv");
-    $filename="download/avto-polit-price.csv";
+    unlink("download/"."tandem-auto-price.csv");
+    $filename="download/tandem-auto-price.csv";
     $fd = fopen($filename, "w");
       $order = "tov_make;tov_kod;tov_name;cena_;count_;pricesh_kod;обновлен ".date("d-m-Y")."\r\n";
       fwrite($fd, $order);

@@ -187,7 +187,7 @@
 					<li><a href="klients.php" title="Пользователи"><img src="images/userinfo.png" alt="Пользователи" class="icon"></a><a href="klients.php" title="Пользователи">Пользователи</a></li>
 					<li class="hidden"><a href="discount.php" title="Скидки"><img src="images/voucher.png" alt="Скидки" class="icon"></a><a href="discount.php" title="Скидки">Скидки</a></li>
                     <li><a href="deliv.php" title="Перевозчики"><img src="images/order.png" alt="Перевозчики" class="icon"></a><a href="deliv.php" title="Перевозчики">Перевозчики</a></li>        
-                    <li><a href="download/avto-polit-price.csv" title="Наш прайс"><img src="images/order.png" alt="Наш прайс" class="icon"></a><a href="download/avto-polit-price.csv" title="Наш прайс">Наш прайс</a></li>        
+                    <li><a href="download/tandem-auto-price.csv" title="Наш прайс"><img src="images/order.png" alt="Наш прайс" class="icon"></a><a href="download/tandem-auto-price.csv" title="Наш прайс">Наш прайс</a></li>        
 				</ul>
             </td><td>
                 <table><tr><td width=100px><p>Курсы валют:</p></td><td></td></tr>
