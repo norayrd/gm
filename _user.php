@@ -10,6 +10,7 @@ if ($user_group<1) {
             $par_cuser_name_first=$_POST['customer_firstname'].'';
             $par_cuser_name_last=$_POST['customer_lastname'].'';
             $par_cuser_name_middle=$_POST['customer_middlename'].'';
+            $par_cuser_name_full = $par_cuser_name_last." ".$par_cuser_name_first." ".$par_cuser_name_middle;
             $par_cuser_group_id=$_POST['group_id']-0;
             $par_cuser_sex=$_POST['id_gender']-0;
             $par_cuser_avto_vin=$_POST['avto_vin'].'';
@@ -28,6 +29,7 @@ if ($user_group<1) {
                 $sql_="update gm_users set name_first='$par_cuser_name_first',
                                            name_last='$par_cuser_name_last',
                                            name_middle='$par_cuser_name_middle',
+                                           name_full='$par_cuser_name_full',
                                            group_id=$par_cuser_group_id,
                                            sex_=$par_cuser_sex,
                                            avto_vin='$par_cuser_avto_vin',

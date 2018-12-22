@@ -136,7 +136,8 @@
 		else {
 			//создаем пользователя
 			$login_activated=time();
-			$sql="insert into gm_users(login_,pass_,ip_,name_first,name_last,name_middle,group_id,sex_,email_,activated_,ts_)values('".$_POST["email"]."','".$_POST["passwd"]."','".$_SERVER['REMOTE_ADDR']."','".$_POST["customer_firstname"]."','".$_POST["customer_lastname"]."','".$_POST["customer_middlename"]."',1,$_POSTid_gender,'".$_POST["email"]."',".$login_activated.",".time().")";
+			$user_name_full = $_POST["customer_lastname"]." ".$_POST["customer_firstname"]." ".$_POST["customer_middlename"];
+			$sql="insert into gm_users(login_,pass_,ip_,name_first,name_last,name_middle,group_id,sex_,email_,activated_,ts_, created_, name_full)values('".$_POST["email"]."','".$_POST["passwd"]."','".$_SERVER['REMOTE_ADDR']."','".$_POST["customer_firstname"]."','".$_POST["customer_lastname"]."','".$_POST["customer_middlename"]."',1,$_POSTid_gender,'".$_POST["email"]."',".$login_activated.",".time().", CURRENT_TIMESTAMP, '".$user_name_full."')";
 			$tb=mysql_query($sql);
 			$sql="select u.user_id from gm_users u where u.login_='".$_POST["email"]."';";
 			$tb=mysql_query($sql);

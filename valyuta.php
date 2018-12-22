@@ -27,7 +27,7 @@ if ($kod_==$_GET["kod_"]) {
             if ($user_group==3){
                 if (isset($vl_ch)) { 
                     if (($new_vl_cours>0)&&(abs($new_vl_cours-$v_cours)<=5)&&($new_vl_cours!=$v_cours)) {
-                        mysql_query("update gm_valyuta_cours set cours_=$new_vl_cours, user_id=$user_id where valyuta_kod=$valyuta_kod and basic_valyuta_kod=$basic_valyuta_kod and cours_=$v_cours");
+                        mysql_query("update gm_valyuta_cours set cours_=$new_vl_cours, user_id=$user_id, date_update=CURRENT_TIMESTAMP where valyuta_kod=$valyuta_kod and basic_valyuta_kod=$basic_valyuta_kod and cours_=$v_cours");
                         $tb=mysql_query($sql_);
                         @$tb_n=mysql_numrows($tb);
                         if ($tb_n>0) {

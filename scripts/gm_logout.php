@@ -69,28 +69,4 @@
 		$user_id=mysql_real_escape_string($row['user_id']);
 		$user_name_first=mysql_real_escape_string($row['name_first']);
 	}
-	//print $_COOKIE["kod_"];
-	/*
-	// < < ОБРАБАТЫВАЕМ ФОРМЫ > >
-	if (isset($_POST['form_id'])) {
-		
-		//если введены логин/пароль, то авторизуем
-		if ($_POST['form_id']="login"){
-			$sql="select u.user_id from gm_users u where (u.login_='".$_POST['lgn_']."')and(u.pass_='".$_POST['psw_']."')";
-			$tb=mysql_query($sql);
-			if ($row = mysql_fetch_assoc($tb)){
-				$user_id=mysql_real_escape_string($row['user_id']);
-				$sql="insert into gm_kod (kod_, create_dt, ip_, user_id)values(".$_COOKIE["kod_"].",current_timestamp,'".$_SERVER['REMOTE_ADDR']."',".$user_id.") ON DUPLICATE KEY UPDATE ip_='".$_SERVER['REMOTE_ADDR']."', user_id=".$user_id.";";
-				$tb=mysql_query($sql);
-			}
-			//header("Location: #");
-		}
-		
-		
-	}
-    */
-//  print $_POST['identification_login'].'<br>';
-//  print $_COOKIE["kod_"]."<br>";
-//  print '$kod_ok='.$kod_ok.'<br>'.$sql.'<br>';
-//  print $row['time_'];   
 ?>
