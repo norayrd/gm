@@ -2,7 +2,7 @@
 
 <div id="header">
 		<a id="header_logo" href="http://www.tandem-auto.com.ua" title="tandem-auto.com.ua">
-			<img src="images/logotip.png" alt="tandem-auto.com.ua" height="80" class="logo">
+			<img src="images/tandem_blue_red.png" alt="tandem-auto.com.ua" height="80" class="logo">
 		</a>
 		<div id="header_right">
 		<div class="clearblock"></div>
