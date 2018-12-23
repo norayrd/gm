@@ -98,8 +98,18 @@ if(isset($_POST['upload'])){
 			// print $sql;
 			mysql_query($sql);
 			//удаляем старые записи
+
+			$sql="delete from p_prices_dop where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);";
+			mysql_query($sql);
+
+			$sql="delete from p_prices_count where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);";
+			mysql_query($sql);
+
 			$sql="delete from p_prices where pricesh_kod=$pricesh_kod";
 			mysql_query($sql);
+
+
+
 			for($j=2; $j<=$data->sheets[0]['numRows']; $j++) { // Начинаем выводить данные со второй строки
 				if (!empty($data->sheets[0]['cells'][$j][1]) && !empty($data->sheets[0]['cells'][$j][2]) && !empty($data->sheets[0]['cells'][$j][3]) && !empty($data->sheets[0]['cells'][$j][4])) {
 					$tov_make=trim($data->sheets[0]['cells'][$j][1]);

@@ -71,7 +71,13 @@ if ($user_group<3) {
 				// убираем из временного прайса номер реального прайса, чтобы повторно не нажимали "обновление страницы" и затерли сам прайс
 				//mysql_query("update p_pricesh set destination_=0 where pricesh_kod=$save_pr_source");
 				// удаляем старые детали и переносим новые
-				mysql_query("delete from p_prices where pricesh_kod=$pricesh_kod");
+			mysql_query("delete from p_prices_dop where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);");
+
+			mysql_query("delete from p_prices_count where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);";
+
+			mysql_query("delete from p_prices where pricesh_kod=$pricesh_kod");
+
+
                 //mysql_query("update p_prices set pricesh_kod=$pricesh_kod where pricesh_kod=$save_pr_source");
                 $ssql="insert into p_prices(tov_make_kod,tov_kod,tov_name,cena_,pricesh_kod,action_,count_,count2_,count3_,count4_,count5_,group_kod,tov_kod2,hide_) ".
                             "select               tm.tov_make_kod,t.tov_kod,t.tov_name,t.cena_,$pricesh_kod,t.action_,t.count_,t.count2_,t.count3_,t.count4_,t.count5_,t.group_kod,t.tov_kod2,t.hide_  ".

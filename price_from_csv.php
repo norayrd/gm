@@ -100,6 +100,13 @@ if(isset($_POST['upload'])){
 			// print $sql; exit;
 			mysql_query($sql);
 			//удаляем старые записи
+
+			$sql="delete from p_prices_dop where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);";
+			mysql_query($sql);
+
+			$sql="delete from p_prices_count where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);";
+			mysql_query($sql);
+
 			$sql="delete from tmp_prices where pricesh_kod=$pricesh_kod";
 			mysql_query($sql);
             
