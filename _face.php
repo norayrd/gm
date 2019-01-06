@@ -46,12 +46,13 @@
                                            tel_='$par_faces_tel',
                                            tel_mob='$par_faces_tel_mob',
                                            deliv_strahovka=$par_faces_deliv_strahovka,
-                                           deliv_need_adr=$par_faces_deliv_need_adr
+                                           deliv_need_adr=$par_faces_deliv_need_adr,
+                                           date_modify=current_timestamp
                     where faces_id=$par_faces_id; ";
                 mysql_query($sql_);
                 if (isset($_POST['nextpage'])) print "<script> location.replace('".$_POST['nextpage']."'); </script>";
             } else {
-                $sql_="insert into gm_faces ()values(); ";
+                //$sql_="insert into gm_faces ()values(); ";
             }
     }
 ?>

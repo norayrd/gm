@@ -143,15 +143,30 @@
 			$tb=mysql_query($sql);
 			//создаем его физ лицо и машину
 			if ($row = mysql_fetch_assoc($tb)){
-				$sql="insert into gm_faces (user_id,typ_,name_first,name_last,name_middle,email_,country_,region_,city_,zip_,adr_,name_organization,info_,tel_,tel_mob,ts_)values(".$row['user_id'].",0,'".	$_POST["firstname"]."','".$_POST["lastname"]."','".$_POST["middlename"]."','".$_POST["email"]."',$_POSTid_country,$_POSTid_region,'".$_POST["id_city"]."','".$_POST["postcode"]."','".$_POST["address"]."','".$_POST["company"]."','".$_POST["other"]."','".$_POST["phone"]."','".$_POST["phone_mobile"]."',".time().")";
+
+
+				$face_firstname = $_POST["firstname"]."";
+				$face_lastname = $_POST["lastname"]."";
+				$face_middlename = $_POST["middlename"]."";
+				$face_company = $_POST["company"]."";
+
+			        $face_type = 0;
+				if ($face_type == 0) {
+					$face_name_full = $face_lastname." ".$face_firstname." ".$face_middlename;
+				} else {
+					$face_name_full = $face_company;
+				}
+
+				$sql="insert into gm_faces (user_id,typ_,name_first,name_last,name_middle,email_,country_,region_,city_,zip_,adr_,name_organization,info_,tel_,tel_mob,ts_, date_create, date_modify, name_full )".
+					"values(".$row['user_id'].",0,'".$face_firstname."','".$face_lastname."','".$face_middlename."','".$_POST["email"]."',$_POSTid_country,$_POSTid_region,'".$_POST["id_city"]."','".$_POST["postcode"]."','".$_POST["address"]."','".$face_company."','".$_POST["other"]."','".$_POST["phone"]."','".$_POST["phone_mobile"]."',".time().", current_timestamp, current_timestamp, '".$face_name_full."' )";
 				$tb=mysql_query($sql);
-                $sql="insert into gm_users_avto(user_id,vin_,marka_,model_,year_,
-                                            kuzov_,dvig_,toplivo_,kpp_,ts_)
-                                     values(".$row['user_id'].",'".$_POST["avto_vin"]."','".$_POST["avto_marka"]."','".$_POST["avto_model"]."','".$_POST["avto_year"]."',
-                                            ".($_POST["avto_kuzov"]-0).",'".$_POST["avto_dvig"]."',".($_POST["avto_toplivo"]-0).",".($_POST["avto_kpp"]-0).",".time().")";                                
-        print $sql;
-                $tb=mysql_query($sql);
-                
+
+				$sql="insert into gm_users_avto(user_id,vin_,marka_,model_,year_,
+							kuzov_,dvig_,toplivo_,kpp_,ts_)
+						values(".$row['user_id'].",'".$_POST["avto_vin"]."','".$_POST["avto_marka"]."','".$_POST["avto_model"]."','".$_POST["avto_year"]."',
+							".($_POST["avto_kuzov"]-0).",'".$_POST["avto_dvig"]."',".($_POST["avto_toplivo"]-0).",".($_POST["avto_kpp"]-0).",".time().")";                                
+				print $sql;
+				$tb=mysql_query($sql);
 			}
 			$email_=$_POST["email"];
 			$message_="<p>Уважаемый пользователь, благодарим Вас за регистрацию на сайте www.tandem-auto.com.ua</p><p>Для завершения регистрации необходимо активировать Вашу учетную запись одним из нижеперечисленных способов:</p>

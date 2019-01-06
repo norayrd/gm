@@ -406,7 +406,7 @@ if (($step_==1)||($step_==2)) {
     $z_deliv_adr=$_POST['deliv_adr'].'';
     $z_deliv_poluchatel=$_POST['deliv_poluchatel'].'';
     $z_rem=$_POST['dop_info'].'';
-//создаем заказ и показываем содержание в фиксированном фиде в состоянии "оформления/ожидающем оплаты"
+//создаем заказ и показываем содержание в фиксированном виде в состоянии "оформления/ожидающем оплаты"
    $sql="insert into gm_rashodh (user_id,faces_id,rashodh_status_kod,den_schet_id,
                                  deliv_id,deliv_strahovka,deliv_office,deliv_adr,deliv_poluchatel,rem_)
                           select $z_user_id,$z_faces_id,0,null,

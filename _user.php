@@ -42,7 +42,7 @@ if ($user_group<1) {
                 mysql_query($sql_);
                 if (isset($_POST['nextpage'])) print "<script> location.replace('".$_POST['nextpage']."'); </script>";
             } else {
-                $sql_="insert into gm_faces ()values(); ";
+                //$sql_="insert into gm_faces ()values(); ";
             }
     }
     if (isset($_POST['SubmitAccess'])) {
