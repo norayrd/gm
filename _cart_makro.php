@@ -5,6 +5,7 @@
 			if (isset($_GET["delete"]) && isset($_GET["rashod_kod"])) {
 				$sql_="delete from gm_rashod where (rashod_kod=".($_GET["rashod_kod"]-0).")and((user_id=$user_id)or(kod_=$kod_))";
 				mysql_query($sql_);
+                                mysql_query("CALL gm_rashodh_update2(".$_GET["rashod_kod"]-0.");");
 			} else
 			//если добавление 
 			if (isset($_GET["add"]) && isset($_GET["prices_kod"])) {

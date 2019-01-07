@@ -407,11 +407,20 @@ if (($step_==1)||($step_==2)) {
     $z_deliv_poluchatel=$_POST['deliv_poluchatel'].'';
     $z_rem=$_POST['dop_info'].'';
 //создаем заказ и показываем содержание в фиксированном виде в состоянии "оформления/ожидающем оплаты"
-   $sql="insert into gm_rashodh (user_id,faces_id,rashodh_status_kod,den_schet_id,
-                                 deliv_id,deliv_strahovka,deliv_office,deliv_adr,deliv_poluchatel,rem_)
-                          select $z_user_id,$z_faces_id,0,null,
-                                 $z_deliv_id,$z_deliv_strahovka,$z_deliv_office,'$z_deliv_adr','$z_deliv_poluchatel','$z_rem'
-                            from gm_rashod r where (r.rashodh_kod is null)and((r.kod_=$kod_)or((r.user_id=$user_id)and($user_id>0)) )and(r.checked_=1) limit 1;"; 
+   $sql="insert into gm_rashodh (user_id, faces_id, rashodh_status_kod, den_schet_id,
+                                 deliv_id, deliv_strahovka, deliv_office, deliv_adr, deliv_poluchatel, rem_,
+                                 rashodh_date, date_create, date_modified, date_modified, rashodh_nom, ts_,
+                                 nds_, valyuta_kod, valyuta_cours, cours_usd, cours_eur)
+                          select distinct $z_user_id, $z_faces_id, 0, null,
+                                 $z_deliv_id, $z_deliv_strahovka, $z_deliv_office, '$z_deliv_adr', '$z_deliv_poluchatel', '$z_rem',
+                                 CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, get_doc_nom(1,null), UNIX_TIMESTAMP(),
+                                 sys.nds_, vc.valyuta_kod, vc.cours_, u.cours_, e.cours_)
+                            from gm_rashod r 
+                                 left join gm_system sys on 1=1
+                                 left join gm_valyuta_cours vc on sys.valyuta_cours_kod_basic=vc.valyuta_cours_kod
+                                 left join gm_valyuta_cours u on sys.valyuta_cours_kod_usd=u.valyuta_cours_kod
+                                 left join gm_valyuta_cours e on sys.valyuta_cours_kod_eur=e.valyuta_cours_kod
+                           where (r.rashodh_kod is null)and((r.kod_=$kod_)or((r.user_id=$user_id)and($user_id>0)) )and(r.checked_=1) limit 1; "; 
    mysql_query($sql);
    if (mysql_affected_rows()>0) {    
        $sql = "select AUTO_INCREMENT-1 rashodh_kod from information_schema.TABLES where (table_schema=DATABASE()) and (table_name='gm_rashodh')";
@@ -423,6 +432,7 @@ if (($step_==1)||($step_==2)) {
                       set r.rashodh_kod=$rashodh_kod
                     where (r.rashodh_kod is null)and((r.kod_=$kod_)or((r.user_id=$user_id)and($user_id>0)) )and(r.checked_=1); ";
            mysql_query($sql);
+           mysql_query("CALL gm_rashodh_update($rashodh_kod);");
            mysql_query('COMMIT');
        }      
    }

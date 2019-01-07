@@ -9,29 +9,35 @@
             if (isset($_GET["add"])) {
                 $sql_="update gm_rashod r set r.count_=r.count_+1 where (r.rashod_kod=$par_rashod_kod)and(r.ts_=$par_ts)";
                 mysql_query($sql_);
+                mysql_query("CALL gm_rashodh_update2($par_rashod_kod);");
             }
             else if (isset($_GET["sub"])) {
                 $sql_="update gm_rashod r set r.count_=r.count_-1 where (r.rashod_kod=$par_rashod_kod)and(r.ts_=$par_ts)and(r.count_>1)";
                 mysql_query($sql_);
+                mysql_query("CALL gm_rashodh_update2($par_rashod_kod);");
             }
             else if (isset($_GET["count"])) {
                 $count_=$_GET["count"]-0;
                 if ($count_>0) {
                     $sql_="update gm_rashod r set r.count_=$count_ where (r.rashod_kod=$par_rashod_kod)and(r.ts_=$par_ts)and($count_>0)";
                     mysql_query($sql_);
+                    mysql_query("CALL gm_rashodh_update2($par_rashod_kod);");
                 }
             }
             else if (isset($_GET["del"])) {
                 $sql_="delete from gm_rashod where (rashod_kod=$par_rashod_kod)and(ts_=$par_ts)";
                 mysql_query($sql_);
+                mysql_query("CALL gm_rashodh_update2($par_rashod_kod);");
             }
             else if (isset($_GET["check"])) {
                 $sql_="update gm_rashod set checked_=1 where (rashod_kod=$par_rashod_kod)and(ts_=$par_ts)";
                 mysql_query($sql_);
+                mysql_query("CALL gm_rashodh_update2($par_rashod_kod);");
             }
             else if (isset($_GET["uncheck"])) {
                 $sql_="update gm_rashod set checked_=0 where (rashod_kod=$par_rashod_kod)and(ts_=$par_ts)";
                 mysql_query($sql_);
+                mysql_query("CALL gm_rashodh_update2($par_rashod_kod);");
             }
             $sql_="select tm.tov_make, ifnull(r.cena_ * r.valyuta_cours,0) cena_, ifnull(r.cena_ * r.valyuta_cours * r.count_,0) summa_,
                           ph.srok_min, ph.srok_max, r.*

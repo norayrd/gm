@@ -98,7 +98,9 @@
 	}
 	
 	//если есть детали в корзине, собранные в гостевом режиме, то переводим под пользовател€
-	if ($user_id) mysql_query("update gm_rashod r set r.user_id=$user_id where r.kod_=$kod_");
+	if ($user_id) {
+            mysql_query("update gm_rashod r set r.user_id=$user_id where r.kod_=$kod_");
+        }
 	//≈сли есть SubmitAccount, то провер€ем правильность данных и регистрируем нового пользовател€. ≈сли есть ошибки, то пишем их в $login_error
 	if (isset($_POST["SubmitAccount"])){
 		$login_error="";
