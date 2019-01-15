@@ -73,7 +73,7 @@ if ($user_group<3) {
 				// удаляем старые детали и переносим новые
 			mysql_query("delete from p_prices_dop where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);");
 
-			mysql_query("delete from p_prices_count where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);";
+			mysql_query("delete from p_prices_count where prices_kod in (select prices_kod from p_prices p where p.pricesh_kod=$pricesh_kod);");
 
 			mysql_query("delete from p_prices where pricesh_kod=$pricesh_kod");
 
